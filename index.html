@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="color-scheme" content="light dark" />
+  <meta charset="utf-8" />
+  <title>Matteo Berenger — OSCM / MIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Matteo Berenger — OSCM/MIS student, bilingual French–English, student-athlete. Work samples in industry analysis, Tableau dashboards, and strategic partner offers." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Matteo Berenger — OSCM / MIS" />
+  <meta property="og:description" content="Bilingual OSCM/MIS student & student-athlete. Projects in analytics, dashboards, and partner offers." />
+  <meta property="og:image" content="https://your-domain.example/images/og-cover.jpg" />
+  <meta property="og:url" content="https://matteoberenger.wixsite.com/matteoberenger" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Matteo Berenger — OSCM / MIS" />
+  <meta name="twitter:description" content="Bilingual OSCM/MIS student & student-athlete. Projects in analytics, dashboards, and partner offers." />
+  <meta name="twitter:image" content="https://your-domain.example/images/og-cover.jpg" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Matteo Berenger",
+    "jobTitle": "OSCM / MIS",
+    "email": "mailto:matteoberenger@arizona.edu",
+    "url": "https://matteoberenger.wixsite.com/matteoberenger",
+    "sameAs": [
+      "https://www.linkedin.com/in/matteoberenger",
+      "https://github.com/YOUR-GITHUB"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --primary:#0F3D5E;         /* deep navy (AA on white) */
+      --accent:#E7A33E;          /* golden accent */
+      --bg:#ffffff;
+      --text:#0f172a;            /* slate-900 */
+      --muted:#334155;           /* slate-700 (stronger contrast for body) */
+      --card:#f8fafc;            /* slate-50 */
+      --border:#e2e8f0;          /* slate-200 */
+      --focus:#1d4ed8;           /* accessible blue outline */
+      --link:#0F3D5E;            /* link color light mode */
+      --maxw:1100px;
+      --radius:14px;
+      --shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1220;
+        --text:#E6EDF3;          /* high-contrast text */
+        --muted:#AFC3D7;         /* improved contrast */
+        --card:#0e172a;
+        --border:#1f2a44;
+        --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 28px rgba(0,0,0,.45);
+        --link:#77b7ff;          /* AA on dark bg */
+      }
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg); color:var(--text); line-height:1.6;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%; height:auto; display:block; border-radius:calc(var(--radius) - 6px)}
+    a{color:var(--link); text-decoration:underline; text-underline-offset:2px}
+    a:hover,a:focus{text-decoration-thickness:2px}
+    :focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:6px}
+
+    .container{max-width:var(--maxw); margin-inline:auto; padding:clamp(16px,3vw,28px)}
+    header{
+      border-bottom:1px solid var(--border);
+      position:sticky; top:0;
+      backdrop-filter:blur(8px);
+      background:rgba(255,255,255,.85); /* fallback for older browsers */
+      background:color-mix(in srgb, var(--bg) 85%, transparent);
+      z-index:10
+    }
+    @media (prefers-color-scheme: dark){
+      header{ background:rgba(11,18,32,.8) }
+    }
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand .dot{width:14px; height:14px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent)}
+    .brand h1{font-size:clamp(18px,2.4vw,22px); line-height:1.2; margin:0; letter-spacing:.2px}
+    nav[aria-label="Primary"] a{display:inline-block; padding:10px 12px; border-radius:10px}
+    nav[aria-label="Primary"] a:hover,
+    nav[aria-label="Primary"] a:focus-visible{
+      background:rgba(231,163,62,.28);
+      background:color-mix(in srgb, var(--accent) 32%, #fff);
+      outline:none
+    }
+
+    .hero{display:grid; grid-template-columns:1fr; gap:16px; padding-block:clamp(24px,5vw,56px)}
+    .hero h2{font-size:clamp(28px,6vw,44px); line-height:1.2; margin:0 0 6px 0; color:var(--primary)}
+    .hero p.tagline{margin:0; color:var(--muted); font-size:clamp(15px,2.6vw,18px)}
+
+    section{padding-block:clamp(24px,5vw,56px); border-bottom:1px solid var(--border)}
+    .section-title{font-size:clamp(22px,4.2vw,28px); margin:0 0 16px 0; color:var(--primary); letter-spacing:.3px}
+    .lead{margin:0 0 22px 0; color:var(--muted); max-width:70ch}
+
+    .grid{display:grid; grid-template-columns:1fr; gap:clamp(14px,2vw,22px)}
+    @media (min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden; /* broader support than clip */
+      box-shadow:var(--shadow);
+      display:flex; flex-direction:column; min-height:100%
+    }
+    .card figure{margin:0}
+    .card .content{padding:16px 16px 18px; display:flex; flex-direction:column; gap:10px}
+    .card h3{margin:0; font-size:18px; line-height:1.3}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:2px}
+    .tag{border:1px solid var(--border); background:color-mix(in srgb, var(--accent) 18%, transparent); padding:2px 8px; border-radius:999px; font-size:12px; letter-spacing:.2px}
+    @media (prefers-color-scheme: dark){
+      .tag{background:color-mix(in srgb, var(--accent) 28%, transparent); border-color:color-mix(in srgb, var(--accent) 40%, #000)}
+    }
+    .card a.btn{
+      align-self:flex-start;
+      margin-top:auto;
+      background:var(--primary); color:#fff;
+      padding:10px 14px; border-radius:10px; text-decoration:none; font-size:14px;
+      box-shadow:0 4px 14px rgba(15,61,94,.25)
+    }
+    .card a.btn:focus-visible{
+      outline:3px solid var(--focus); outline-offset:2px;
+      box-shadow:0 0 0 4px color-mix(in srgb, var(--focus) 35%, transparent)
+    }
+
+    .contact-list{display:grid; grid-template-columns:1fr; gap:12px; max-width:680px}
+    @media (min-width:560px){.contact-list{grid-template-columns:repeat(3,1fr)}}
+    .contact-item{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px; box-shadow:var(--shadow)}
+    .contact-item a{font-weight:600; word-break:break-all}
+
+    footer{padding:28px 0 48px; color:var(--muted); font-size:14px}
+
+    /* Headshot styles */
+    .headshot{
+      display:flex;
+      justify-content:center;
+      margin:16px 0 8px;
+    }
+    .headshot img{
+      width:160px; height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid var(--accent);
+      box-shadow:0 4px 14px rgba(0,0,0,.2);
+    }
+
+    .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip-link:focus{position:fixed; left:12px; top:12px; width:auto; height:auto; padding:10px 12px; background:#111; color:#fff; border-radius:10px; z-index:1000}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Matteo Berenger</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div>
+        <h2 id="intro-title">The Driven Problem Solver — OSCM / MIS</h2>
+        <p class="tagline">French-born, bilingual (FR-EN) student-athlete focused on operations, supply chain, and analytics.</p>
+        <p class="lead">I bring a global perspective and adapt quickly to new environments. Eleven years of rugby—now at UA—taught me teamwork, communication, and time management. These strengths translate directly into how I approach complex operational challenges and cross-functional projects on campus and beyond.</p>
+      </div>
+    </section>
+
+    <!-- Headshot Section -->
+<section class="headshot">
+  <img
+    src="HTML/images/profile pic.png"
+    alt="Headshot of Matteo Berenger"
+    width="160"
+    height="160"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="high"
+  />
+</section>
+
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About</h2>
+      <p class="lead">
+        As a bilingual French native, I’ve experienced different cultures and ways of thinking—valuable for operations and supply chain work with international partners. Rugby has reinforced clear, effective communication and the discipline to balance training with academics.
+      </p>
+      <ul>
+        <li><strong>Focus:</strong> Operations &amp; Supply Chain, MIS, analytics, customer insights.</li>
+        <li><strong>Strengths:</strong> Data storytelling, stakeholder comms, dashboards (Tableau), Excel analysis.</li>
+        <li><strong>Student-Athlete:</strong> Rugby at UA; leadership, resilience, and time management.</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Projects</h2>
+      <div class="grid">
+        <!-- Industry Report — Automobile Sector -->
+        <article class="card">
+          <figure>
+            <img
+              src="HTML/images/report.png"  <!-- add your thumbnail image -->
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              alt="Cover of the U.S. automobile industry report – charts and industry graphics"
+            />
+          </figure>
+          <div class="content">
+            <h3>Industry Report — U.S. Automobile Sector</h3>
+            <p>
+              Produced an in-depth report on the U.S. auto industry combining financial, industry, and narrative data to highlight trends, challenges, and strategic opportunities.
+            </p>
+            <div class="tags">
+              <span class="tag">Industry Analysis</span>
+              <span class="tag">Business Reporting</span>
+              <span class="tag">Narrative Insight</span>
+            </div>
+            <a
+              class="btn"
+              href="https://1bbbc0f5-9a4f-44ad-ae4e-0d630032b6e1.filesusr.com/ugd/7bbc2f_c17cc6ac33984eecbc6ada1e813318e8.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open PDF — U.S. Automobile Industry Report"
+            >
+              View Full Report (PDF)
+            </a>
+          </div>
+        </article>
+
+        <!-- Tableau Visualization -->
+        <article class="card">
+          <figure>
+            <img
+              src="HTML/images/Data.png"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              alt="Tableau map visualization showing state schools across the U.S. with orange dots representing median starting and mid-career salaries."
+            />
+          </figure>
+          <div class="content">
+            <h3>Tableau Dashboard — Median Salaries for State Schools</h3>
+            <p>
+              Designed an interactive Tableau dashboard analyzing median starting and mid-career salaries across U.S. state universities. Users can filter to view the top and bottom 10 schools, visualize regional salary differences, and explore linear vs. logarithmic trendlines.
+            </p>
+            <div class="tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Analytics</span>
+              <span class="tag">Storytelling</span>
+            </div>
+            <a
+              class="btn"
+              href="https://1bbbc0f5-9a4f-44ad-ae4e-0d630032b6e1.filesusr.com/ugd/7bbc2f_9337e19788fd4919b076a95b9876eccb.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open PDF — Median Salaries for State Schools Tableau Project"
+            >
+              View Full Report (PDF)
+            </a>
+          </div>
+        </article>
+
+        <!-- Internship: Akensys / Stellantis -->
+        <article class="card">
+          <figure>
+            <img width="600" height="400" loading="lazy" decoding="async"
+              alt="Timeline with milestones for a partner offer to a manufacturing plant"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' role='img' aria-label='Partner offer timeline'><rect width='100%' height='100%' fill='%230f172a'/><text x='24' y='48' font-family='system-ui' font-size='22' fill='%23E7A33E'>AKENSYS — Client Commercial Offer</text><text x='24' y='76' font-family='system-ui' font-size='14' fill='white'>Proposal for Stellantis Poissy Plant</text><g stroke='%23E7A33E' stroke-width='3' fill='none'><circle cx='100' cy='240' r='10'/><circle cx='260' cy='240' r='10'/><circle cx='420' cy='240' r='10'/></g><line x1='100' y1='240' x2='420' y2='240' stroke='%23E7A33E' stroke-width='4'/><g font-family='system-ui' fill='white' font-size='12'><text x='70' y='270'>Discovery</text><text x='230' y='270'>Offer</text><text x='395' y='270'>Review</text></g></svg>" />
+          </figure>
+          <div class="content">
+            <h3>Internship — Client Commercial Offer (AKENSYS → Stellantis)</h3>
+            <p>Supported a commercial offer to implement RFID/anti-theft tech for Stellantis’ Poissy plant in France—coordinating with product/ops and aligning value props to customer needs.</p>
+            <div class="tags"><span class="tag">RFID</span><span class="tag">Partner Offer</span><span class="tag">Operations</span></div>
+            <a class="btn" href="#" aria-label="Open Internship — Client Commercial Offer (AKENSYS to Stellantis)">Open: AKENSYS → Stellantis Commercial Offer</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p class="lead">Let’s talk.</p>
+      <div class="contact-list">
+        <div class="contact-item" aria-label="Email">
+          <div>Email</div>
+          <a href="mailto:matteoberenger@arizona.edu">matteoberenger@arizona.edu</a>
+        </div>
+        <div class="contact-item" aria-label="LinkedIn">
+          <div>LinkedIn</div>
+          <a href="https://www.linkedin.com/in/matteoberenger" rel="noopener">linkedin.com/in/matteoberenger</a>
+        </div>
+        <div class="contact-item" aria-label="GitHub">
+          <div>GitHub</div>
+          <a href="https://github.com/matteoberenger" rel="noopener">github.com/YOUR-GITHUB</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>© <span id="year"></span> Matteo Berenger — Built for accessibility (WCAG AA), performance, and clarity.</small>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <!--
+    Notes:
+    • Put your headshot at images/headshot.jpg (same size or bigger than 160×160).
+    • Add real thumbnails for images/report.png and images/Data.png if you haven't already.
+    • Colors are tuned for AA contrast in both light and dark mode.
+  -->
+</body>
+</html>
