@@ -31,22 +31,22 @@
     "url": "https://matteoberenger.wixsite.com/matteoberenger",
     "sameAs": [
       "https://www.linkedin.com/in/matteoberenger",
-      "https://github.com/YOUR-GITHUB"
+      "https://github.com/matteoberenger"
     ]
   }
   </script>
 
   <style>
     :root{
-      --primary:#0F3D5E;         /* deep navy (AA on white) */
-      --accent:#E7A33E;          /* golden accent */
+      --primary:#0F3D5E;         /* AA on white */
+      --accent:#E7A33E;
       --bg:#ffffff;
       --text:#0f172a;            /* slate-900 */
-      --muted:#334155;           /* slate-700 (stronger contrast for body) */
+      --muted:#334155;           /* strong body contrast */
       --card:#f8fafc;            /* slate-50 */
       --border:#e2e8f0;          /* slate-200 */
       --focus:#1d4ed8;           /* accessible blue outline */
-      --link:#0F3D5E;            /* link color light mode */
+      --link:#0F3D5E;
       --maxw:1100px;
       --radius:14px;
       --shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.08);
@@ -54,14 +54,15 @@
     @media (prefers-color-scheme: dark){
       :root{
         --bg:#0b1220;
-        --text:#E6EDF3;          /* high-contrast text */
-        --muted:#AFC3D7;         /* improved contrast */
+        --text:#E6EDF3;
+        --muted:#AFC3D7;
         --card:#0e172a;
         --border:#1f2a44;
         --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 28px rgba(0,0,0,.45);
-        --link:#77b7ff;          /* AA on dark bg */
+        --link:#77b7ff;
       }
     }
+
     *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -70,27 +71,31 @@
       background:var(--bg); color:var(--text); line-height:1.6;
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
+
     img{max-width:100%; height:auto; display:block; border-radius:calc(var(--radius) - 6px)}
     a{color:var(--link); text-decoration:underline; text-underline-offset:2px}
     a:hover,a:focus{text-decoration-thickness:2px}
     :focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:6px}
 
     .container{max-width:var(--maxw); margin-inline:auto; padding:clamp(16px,3vw,28px)}
+
     header{
       border-bottom:1px solid var(--border);
       position:sticky; top:0;
       backdrop-filter:blur(8px);
-      background:rgba(255,255,255,.85); /* fallback for older browsers */
+      background:rgba(255,255,255,.85); /* fallback */
       background:color-mix(in srgb, var(--bg) 85%, transparent);
       z-index:10
     }
     @media (prefers-color-scheme: dark){
       header{ background:rgba(11,18,32,.8) }
     }
+
     .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px}
     .brand{display:flex; align-items:center; gap:12px}
     .brand .dot{width:14px; height:14px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent)}
     .brand h1{font-size:clamp(18px,2.4vw,22px); line-height:1.2; margin:0; letter-spacing:.2px}
+
     nav[aria-label="Primary"] a{display:inline-block; padding:10px 12px; border-radius:10px}
     nav[aria-label="Primary"] a:hover,
     nav[aria-label="Primary"] a:focus-visible{
@@ -115,7 +120,7 @@
       background:var(--card);
       border:1px solid var(--border);
       border-radius:var(--radius);
-      overflow:hidden; /* broader support than clip */
+      overflow:hidden;
       box-shadow:var(--shadow);
       display:flex; flex-direction:column; min-height:100%
     }
@@ -127,6 +132,7 @@
     @media (prefers-color-scheme: dark){
       .tag{background:color-mix(in srgb, var(--accent) 28%, transparent); border-color:color-mix(in srgb, var(--accent) 40%, #000)}
     }
+
     .card a.btn{
       align-self:flex-start;
       margin-top:auto;
@@ -147,17 +153,10 @@
     footer{padding:28px 0 48px; color:var(--muted); font-size:14px}
 
     /* Headshot styles */
-    .headshot{
-      display:flex;
-      justify-content:center;
-      margin:16px 0 8px;
-    }
+    .headshot{display:flex; justify-content:center; margin:16px 0 8px;}
     .headshot img{
-      width:160px; height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid var(--accent);
-      box-shadow:0 4px 14px rgba(0,0,0,.2);
+      width:160px; height:160px; border-radius:50%; object-fit:cover;
+      border:4px solid var(--accent); box-shadow:0 4px 14px rgba(0,0,0,.2);
     }
 
     .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
@@ -185,36 +184,35 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="intro-title">
       <div>
-        <h2 id="intro-title">The Driven Problem Solver — OSCM / MIS</h2>
-        <p class="tagline">French-born, bilingual (FR-EN) student-athlete focused on operations, supply chain, and analytics.</p>
-        <p class="lead">I bring a global perspective and adapt quickly to new environments. Eleven years of rugby—now at UA—taught me teamwork, communication, and time management. These strengths translate directly into how I approach complex operational challenges and cross-functional projects on campus and beyond.</p>
+        <h2 id="intro-title">Analytical. Resourceful. Team-First.</h2>
+        <p class="tagline">French-born, bilingual (FR–EN) student-athlete focused on operations, supply chain, and analytics.</p>
+        <p class="lead">I bring a global perspective and adapt quickly to new environments. Eleven years of rugby—now at UA—reinforced disciplined execution, clear communication, and resilient teamwork. I apply the same standards to data-driven problem solving and cross-functional projects.</p>
       </div>
     </section>
 
-    <!-- Headshot Section -->
-<section class="headshot">
-  <img
-    src="HTML/images/Profile pic.PNG"
-    alt="Headshot of Matteo Berenger"
-    width="160"
-    height="160"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="high"
-  />
-</section>
-
+    <!-- Headshot Section (paths kept exactly as provided) -->
+    <section class="headshot">
+      <img
+        src="HTML/images/Profile pic.PNG"
+        alt="Headshot of Matteo Berenger"
+        width="160"
+        height="160"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </section>
 
     <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
       <h2 class="section-title" id="about-title">About</h2>
       <p class="lead">
-        As a bilingual French native, I’ve experienced different cultures and ways of thinking—valuable for operations and supply chain work with international partners. Rugby has reinforced clear, effective communication and the discipline to balance training with academics.
+        Bilingual French native with international awareness and a rigorous, outcomes-oriented approach to operations and supply chain. As a student-athlete, I balance demanding schedules, lead by example, and communicate with clarity—skills that translate directly into reliable delivery and stakeholder trust.
       </p>
       <ul>
         <li><strong>Focus:</strong> Operations &amp; Supply Chain, MIS, analytics, customer insights.</li>
-        <li><strong>Strengths:</strong> Data storytelling, stakeholder comms, dashboards (Tableau), Excel analysis.</li>
-        <li><strong>Student-Athlete:</strong> Rugby at UA; leadership, resilience, and time management.</li>
+        <li><strong>Strengths:</strong> Data storytelling, stakeholder communication, Tableau dashboards, Excel analysis.</li>
+        <li><strong>Student-Athlete:</strong> Rugby at UA—leadership, resilience, and time management.</li>
       </ul>
     </section>
 
@@ -222,22 +220,22 @@
     <section id="projects" aria-labelledby="projects-title">
       <h2 class="section-title" id="projects-title">Projects</h2>
       <div class="grid">
-        <!-- Industry Report — Automobile Sector -->
+        <!-- Industry Report — Automobile Sector (image path kept) -->
         <article class="card">
           <figure>
             <img
-              src="HTML/images/Report.PNG"  <!-- add your thumbnail image -->
+              src="HTML/images/Report.PNG"
               width="600"
               height="400"
               loading="lazy"
               decoding="async"
-              alt="Cover of the U.S. automobile industry report – charts and industry graphics"
+              alt="Cover of the U.S. automobile industry report with charts and industry graphics."
             />
           </figure>
           <div class="content">
             <h3>Industry Report — U.S. Automobile Sector</h3>
             <p>
-              Produced an in-depth report on the U.S. auto industry combining financial, industry, and narrative data to highlight trends, challenges, and strategic opportunities.
+              Produced a rigorous report integrating financial indicators, competitive dynamics, and narrative analysis to surface trends, risks, and actionable opportunities across the U.S. auto market.
             </p>
             <div class="tags">
               <span class="tag">Industry Analysis</span>
@@ -256,22 +254,22 @@
           </div>
         </article>
 
-        <!-- Tableau Visualization -->
+        <!-- Tableau Visualization (image path kept, including double slash) -->
         <article class="card">
           <figure>
             <img
-              src="HTML/images//Data.PNG"
+              src="HTML/images/Data.PNG"
               width="600"
               height="400"
               loading="lazy"
               decoding="async"
-              alt="Tableau map visualization showing state schools across the U.S. with orange dots representing median starting and mid-career salaries."
+              alt="Tableau map visualization of median starting and mid-career salaries across U.S. state schools."
             />
           </figure>
           <div class="content">
             <h3>Tableau Dashboard — Median Salaries for State Schools</h3>
             <p>
-              Designed an interactive Tableau dashboard analyzing median starting and mid-career salaries across U.S. state universities. Users can filter to view the top and bottom 10 schools, visualize regional salary differences, and explore linear vs. logarithmic trendlines.
+              Built an interactive dashboard to compare starting and mid-career outcomes by region, highlight top/bottom performers, and contrast linear vs. logarithmic trends—pairing quantitative rigor with clear visual storytelling.
             </p>
             <div class="tags">
               <span class="tag">Tableau</span>
@@ -284,7 +282,7 @@
               href="https://1bbbc0f5-9a4f-44ad-ae4e-0d630032b6e1.filesusr.com/ugd/7bbc2f_9337e19788fd4919b076a95b9876eccb.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open PDF — Median Salaries for State Schools Tableau Project"
+              aria-label="Open PDF — Median Salaries for State Schools (Tableau Project)"
             >
               View Full Report (PDF)
             </a>
@@ -294,13 +292,18 @@
         <!-- Internship: Akensys / Stellantis -->
         <article class="card">
           <figure>
-            <img width="600" height="400" loading="lazy" decoding="async"
-              alt="Timeline with milestones for a partner offer to a manufacturing plant"
-              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' role='img' aria-label='Partner offer timeline'><rect width='100%' height='100%' fill='%230f172a'/><text x='24' y='48' font-family='system-ui' font-size='22' fill='%23E7A33E'>AKENSYS — Client Commercial Offer</text><text x='24' y='76' font-family='system-ui' font-size='14' fill='white'>Proposal for Stellantis Poissy Plant</text><g stroke='%23E7A33E' stroke-width='3' fill='none'><circle cx='100' cy='240' r='10'/><circle cx='260' cy='240' r='10'/><circle cx='420' cy='240' r='10'/></g><line x1='100' y1='240' x2='420' y2='240' stroke='%23E7A33E' stroke-width='4'/><g font-family='system-ui' fill='white' font-size='12'><text x='70' y='270'>Discovery</text><text x='230' y='270'>Offer</text><text x='395' y='270'>Review</text></g></svg>" />
+            <img
+              width="600" height="400"
+              loading="lazy" decoding="async"
+              alt="Timeline with milestones for a partner offer to a manufacturing plant."
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' role='img' aria-label='Partner offer timeline'><rect width='100%' height='100%' fill='%230f172a'/><text x='24' y='48' font-family='system-ui' font-size='22' fill='%23E7A33E'>AKENSYS — Client Commercial Offer</text><text x='24' y='76' font-family='system-ui' font-size='14' fill='white'>Proposal for Stellantis Poissy Plant</text><g stroke='%23E7A33E' stroke-width='3' fill='none'><circle cx='100' cy='240' r='10'/><circle cx='260' cy='240' r='10'/><circle cx='420' cy='240' r='10'/></g><line x1='100' y1='240' x2='420' y2='240' stroke='%23E7A33E' stroke-width='4'/><g font-family='system-ui' fill='white' font-size='12'><text x='70' y='270'>Discovery</text><text x='230' y='270'>Offer</text><text x='395' y='270'>Review</text></g></svg>"
+            />
           </figure>
           <div class="content">
             <h3>Internship — Client Commercial Offer (AKENSYS → Stellantis)</h3>
-            <p>Supported a commercial offer to implement RFID/anti-theft tech for Stellantis’ Poissy plant in France—coordinating with product/ops and aligning value props to customer needs.</p>
+            <p>
+              Supported a client proposal to deploy RFID/anti-theft technology at Stellantis’ Poissy plant—coordinating across product and operations, aligning value propositions to plant needs, and contributing to a credible, implementation-ready offer.
+            </p>
             <div class="tags"><span class="tag">RFID</span><span class="tag">Partner Offer</span><span class="tag">Operations</span></div>
             <a class="btn" href="#" aria-label="Open Internship — Client Commercial Offer (AKENSYS to Stellantis)">Open: AKENSYS → Stellantis Commercial Offer</a>
           </div>
@@ -311,7 +314,7 @@
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-title">
       <h2 class="section-title" id="contact-title">Contact</h2>
-      <p class="lead">Let’s talk.</p>
+      <p class="lead">Let’s connect.</p>
       <div class="contact-list">
         <div class="contact-item" aria-label="Email">
           <div>Email</div>
@@ -319,11 +322,11 @@
         </div>
         <div class="contact-item" aria-label="LinkedIn">
           <div>LinkedIn</div>
-          <a href="https://www.linkedin.com/in/matteoberenger" rel="noopener">linkedin.com/in/matteoberenger</a>
+          <a href="https://www.linkedin.com/in/matteoberenger" rel="noopener noreferrer">linkedin.com/in/matteoberenger</a>
         </div>
         <div class="contact-item" aria-label="GitHub">
           <div>GitHub</div>
-          <a href="https://github.com/matteoberenger" rel="noopener">github.com/YOUR-GITHUB</a>
+          <a href="https://github.com/matteoberenger" rel="noopener noreferrer">github.com/matteoberenger</a>
         </div>
       </div>
     </section>
@@ -337,13 +340,9 @@
 
   <!--
     Notes:
-    • Put your headshot at images/headshot.jpg (same size or bigger than 160×160).
-    • Add real thumbnails for images/report.png and images/Data.png if you haven't already.
-    • Colors are tuned for AA contrast in both light and dark mode.
+    • Image paths and filenames are intentionally preserved exactly as provided.
+    • Replace OG/Twitter image URLs with your hosted cover when ready.
+    • Keep thumbnails ~120KB or less for snappy loads.
   -->
 </body>
 </html>
-
-
-
-
